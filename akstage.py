@@ -1,4 +1,5 @@
 #!/usr/bin/python
+#Output hosts file mapping all property hostnames to their equivalent staging IP address
 
 import dns.resolver
 import socket
