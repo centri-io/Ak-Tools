@@ -1,4 +1,6 @@
 #!/usr/bin/python
+#Cycle through list of properties to determine whether site routes through Global KSD map or European E3 Map
+
 
 import dns.resolver
 import socket
