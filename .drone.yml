@@ -2,11 +2,12 @@ kind: pipeline
 name: default
 steps:
 - name: publish
- image: plugins/docker
- settings:
-   repo: gwilmot/ak-tools
-   tags: latest
-   username:
-     from_secret: docker_username
-   password:
-     from_secret: docker_password
+  image: plugins/docker
+  settings:
+    repo: gwilmot/ak-tools
+    tags: latest
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+
