@@ -1,14 +1,10 @@
-kind: pipeline
-name: default
-
-steps:
-- name: docker  
-  image: plugins/docker
-  settings:
-  username: 
-    from_secret: docker_username
-  password: 
-    from_secret: docker_password
+pipeline:
+  build_aktools:
+    image: plugins/docker
+    repo: hub.docker.com/gwilmot/ak-tools
+    secrets: [ docker_username, docker_password ]
+    registry: hub.docker.com
+    context: gwilmot/ak-tools
     repo: gwilmot/ak-tools
     tags: latest
 
