@@ -1,1 +1,13 @@
-
+pipeline: 
+  build:
+    image: gwilmot/ak-tools
+    repo: docker
+    settings:
+    username: 
+      from_secret: docker_username
+    password: 
+      from_secret: docker_password
+    tags: latest
+    
+    when:
+      event: push
