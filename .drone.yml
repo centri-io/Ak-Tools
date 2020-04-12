@@ -1,12 +1,12 @@
-pipeline:
-  build_aktools:
-    image: plugins/docker
-    repo: hub.docker.com/gwilmot/ak-tools
-    secrets: [ docker_username, docker_password ]
-    registry: hub.docker.com
-    context: gwilmot/ak-tools
-    repo: gwilmot/ak-tools
-    tags: latest
-
-    when:
-      event: push
+kind: pipeline
+name: default
+steps:
+- name: publish
+ image: plugins/docker
+ settings:
+   repo: gwilmot/ak-tools
+   tags: latest
+   username:
+     from_secret: docker_username
+   password:
+     from_secret: docker_password
