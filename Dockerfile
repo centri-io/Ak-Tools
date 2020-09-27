@@ -4,3 +4,5 @@ COPY akstage.py /
 COPY e3check.py /
 
 ENTRYPOINT "/bin/sh"
+
+CMD "tail -f /dev/null"
